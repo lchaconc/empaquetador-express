@@ -2,10 +2,10 @@
   "name": "empaquetador-express",
   "version": "1.0.0",
   "description": "Prototipo de empaquetador par generador de miniactividades",
-  "main": "./src/index.js",
+  "main": "./index.js",
   "type": "module",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./index.js"
   },
   "repository": {
     "type": "git",
