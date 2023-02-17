@@ -1,16 +1,7 @@
-import express from 'express'
-import dotenv from "dotenv"
-
-const app = express()
-dotenv.config();
+import app from "./src/app";
 
 
 
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${process.env.PORT}`)
+app.listen(app.get("port"), () => {
+  console.log(`API Server en puerto ${app.get("port")}`)
 })
