@@ -1,0 +1,1 @@
+//mdeol de textos:  instrucciones, areas, cajas
