@@ -1,8 +1,1 @@
-[
-    {
-        "titulo": "Aprendamos sobre los ecosistemas",
-        "instrucciones": "Instrucciones de la actividad",
-        "retroCorrecta": "Retroalimentación correcta",
-        "retroIncorrecta": "retroalimentación incorrecta"
-    }
-]
+[{"_id":"63f38b866489bd78d2bb02af","instrucciones":"Instrucciones de prueba...","retroCorrecta":"Muy bien! Lo lograste","retroIncorrecta":"Inténtalo de nuevo","idActividad":123}]
