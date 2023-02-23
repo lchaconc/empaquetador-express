@@ -1,10 +1,12 @@
 {
   "name": "empaquetador-express",
   "version": "1.0.0",
-  "description": "Prototipo de empaquetador par generador de miniactividades",
+  "description": "Prototipo de empaquetador par generador de miniactividades",  
   "main": "./index.js",
+  "type": "commonjs",
   "scripts": {
-    "dev": "nodemon index.js --exec babel-node",
+    "dev": "nodemon index.js",
+    "dev-babel": "nodemon index.js --exec babel-node",
     "start": "node index.js"
   },
   "repository": {

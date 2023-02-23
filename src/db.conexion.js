@@ -1,8 +1,8 @@
-import mongoose from 'mongoose';
+const  mongoose = require('mongoose');
 
 
 
-export default async function conectDB() {
+exports.conectDB = async function () {
 mongoose.set('strictQuery', true);
  const db =  await mongoose.connect(process.env.DB_PATH);
 

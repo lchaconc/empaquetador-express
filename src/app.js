@@ -1,7 +1,13 @@
+/*
 import express from "express";
 import dotenv from "dotenv";
-import indexRoutes from "./routes/index.routes";
-import conectDB from "./db.conexion" ;
+import indexRoutes from "./routes/index.routes.js";
+import conectDB from "./db.conexion.js" ;
+*/
+const express = require("express");
+const dotenv = require("dotenv");
+const routes = require("./routes/index.routes.js");
+const conectDB = require("./db.conexion.js");
 
 const app = express();
 dotenv.config();
@@ -11,9 +17,6 @@ dotenv.config();
 app.set("port", process.env.PORT || 3700);
 app.use(express.json());
 app.use(express.static("./public"));
+app.use(routes);
 
-
-
-app.use(indexRoutes);
-
-export default app;
+module.exports = app;

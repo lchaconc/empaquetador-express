@@ -1,7 +1,8 @@
 const webpack = require('webpack');
 const config = require('./webpack.config.js');
 
- function build() {
+
+ exports.build =  function () {
   console.log("iniciando el BUILD");
   return new Promise((resolve, reject) => {
     webpack(config, (err, stats) => {
@@ -16,7 +17,10 @@ const config = require('./webpack.config.js');
   });
 }
 
+
+
 /*
+
 build()
   .then(stats => {
     console.log(stats.toString({
@@ -27,5 +31,5 @@ build()
     console.error('********Error al construir la aplicación: >>>>', err);
   });
 
+*/
 
-  */
