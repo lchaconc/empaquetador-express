@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const config = require('./webpack.config.js');
 
 
- exports.build =  function () {
+ function build () {
   console.log("iniciando el BUILD");
   return new Promise((resolve, reject) => {
     webpack(config, (err, stats) => {
@@ -17,7 +17,7 @@ const config = require('./webpack.config.js');
   });
 }
 
-
+module.exports = {build}
 
 /*
 

@@ -1,4 +1,4 @@
-import textos from "./textos.json" 
+const textos = require("./textos.json" ); 
 
 onload =()=> setup();
 
