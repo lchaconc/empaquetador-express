@@ -18,24 +18,23 @@ export async function obtenerTextos(req, res) {
   ];
 
   //console.log("textos", textos);
-  //const tmp = await sd.writeJson(textos, "dnd-imagen-area", "textos");
- // console.log("tmp", tmp);
+  const tmp = await sd.writeJson(textos, "dnd-imagen-area", "textos");
+  console.log("tmp", tmp);
   const jsonDirectory = path.join(process.cwd(), "plantillas");
   const file = "builder.js";
 
   // En terminal: npx webpack --config ./plantillas/webpack.config.js
 
  
-  exec('npx webpack --config ./src/controllers/webpack.config.js', (err, stdout, stderr) => {
+  exec('npx webpack --config ./plantillas/webpack.config.js', (err, stdout, stderr) => {
     if (err) {
       console.error(`Error al ejecutar el comando: ${err}`);
-      res.json({IsOk: false});
+      return;
     }
     
     console.log(`Salida del comando: ${stdout}`);
-    res.json({IsOk: true});
   })
   
-
+  res.json({IsOk: true});
 
 }

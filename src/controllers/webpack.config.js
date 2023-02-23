@@ -39,7 +39,7 @@ const rulePng = {
 
 module.exports =  {
     mode: "production",
-    entry: "./plantillas/dnd-imagen-area/main.js",
+    entry: "./dnd-imagen-area/main.js",
     output: {
       path: path.resolve(__dirname, "dist" ),
       filename:  'bundle.[contenthash].js'      
