@@ -17,6 +17,9 @@ dotenv.config();
 app.set("port", process.env.PORT || 3700);
 app.use(express.json());
 app.use(express.static("./public"));
+
+app.use("/descargas", express.static("./plantillas/zips"));
+
 app.use(routes);
 
 module.exports = app;

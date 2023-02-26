@@ -9,7 +9,7 @@ const config = require('./webpack.config.js');
       if (err || stats.hasErrors()) {
         //reject(err || new Error(stats.compilation.errors.join('\n')));
         reject(err || new Error(stats.compilation.errors.join('\n') || 'Error en la construcción'));
-
+        
       } else {
         resolve(stats);
       }

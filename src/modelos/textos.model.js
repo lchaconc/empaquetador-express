@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+
 const textosSchema = new Schema({
   titulo: {
     type: String,

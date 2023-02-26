@@ -3,12 +3,11 @@
 //import * as sd from "../utils/staticdata.js";
 //import build from "../../plantillas/builder.js";
 //const path = require("path");
-const {build} = require ("../../plantillas/builder.js");
-const {writeJson} = require("../utils/staticdata.js")
+const { build } = require("../../plantillas/builder.js");
+const { writeJson } = require("../utils/staticdata.js");
+const path = require("path");
 
-
-
-async function obtenerTextos  (req, res) {
+async function obtenerTextos(req, res) {
   //const textos = await Textos.find({});
 
   const textos = [
@@ -31,34 +30,25 @@ async function obtenerTextos  (req, res) {
   // En terminal: npx webpack --config ./plantillas/webpack.config.js
 
   console.log("Inicio de escritura en json");
-  const resultado = await writeJson(textos, "dnd-imagen-area", "textos" );
+  const resultado = await writeJson(textos, "dnd-imagen-area", "textos");
   //console.log("resultado",resultado);
- 
-  
-  /*
-  build()
-    .then((stats) => {
-      console.log(
-        stats.toString({
-          colors: true,
-        })
-      );
-      res.json({ IsOk: true, msj: "Paquete generado" });
-    })
-    .catch((err) => {
-      console.error("********Error al construir la aplicación: >>>>", err);
-      res.json({ IsOk: false, msj: err });
+
+  try {
+    const stats = await build();
+    const info = stats.toJson();
+    console.log(info);
+
+    return res.json({
+      IsOk: true,
+      msj: "Paquete generado",
+      path: "/descargas/" + info.assets[0].name.split("\\")[2],
     });
-  */
-
-  res.json(resultado); 
-
+  } catch (err) {
+    console.error("********Error al construir la aplicación: >>>>", err);
+    return res.json({ IsOk: false, msj: err });
+  }
 }
-
-
-
-
 
 module.exports = {
-  obtenerTextos
-}
+  obtenerTextos,
+};
