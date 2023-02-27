@@ -31,7 +31,7 @@ async function generarBuild(req, res) {
     return res.json({
       IsOk: true,
       msj: "Paquete generado",      
-      path: "/descargas/" + info.assets[1].name.split("\\")[3]
+      path: "/descargas/" + info.assets[1].name.split("\\")[2]
     });
   } catch (err) {
     console.error("********Error al construir la aplicación: >>>>", err);

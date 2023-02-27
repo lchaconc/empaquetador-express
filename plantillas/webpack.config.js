@@ -39,7 +39,7 @@ module.exports = {
   mode: "production",
   entry: "./plantillas/dnd-imagen-area/main.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../dist"),
     filename: "bundle.[contenthash].js",
   },
   plugins: [
