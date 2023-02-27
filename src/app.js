@@ -12,7 +12,7 @@ const conectDB = require("./db.conexion.js");
 const app = express();
 dotenv.config();
 
-//conectDB().catch(err => console.log(err));
+conectDB().catch(err => console.log(err));
 
 app.set("port", process.env.PORT || 3700);
 app.use(express.json());
