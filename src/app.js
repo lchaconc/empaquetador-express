@@ -6,7 +6,7 @@ import conectDB from "./db.conexion.js" ;
 */
 const express = require("express");
 const dotenv = require("dotenv");
-const routes = require("./routes/index.routes.js");
+const routesDndImagenArea = require("./routes/routes.dnd-imagen-area.js");
 const conectDB = require("./db.conexion.js");
 
 const app = express();
@@ -20,6 +20,6 @@ app.use(express.static("./public"));
 
 app.use("/descargas", express.static("./zips"));
 
-app.use(routes);
+app.use("/api/dnd-imagen-area", routesDndImagenArea);
 
 module.exports = app;

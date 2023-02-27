@@ -1,8 +1,8 @@
-const textos = require("./textos.json" ); 
+const data = require("./data.json" ); 
 
 onload =()=> setup();
 
 
 function setup () {
-    console.log(textos);    
+    console.log(data);    
 }

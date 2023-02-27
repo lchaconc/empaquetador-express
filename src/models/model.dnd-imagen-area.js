@@ -1,7 +1,6 @@
-import { Schema, model } from "mongoose";
+const { Schema, model } = require ("mongoose");
 
-const dndImagenAreaSchema = new Schema({
-  _id: {type: ObjectId},
+const dndImagenAreaSchema = new Schema({  
   username: {
     type: String,
     required: true,
@@ -89,4 +88,5 @@ const dndImagenAreaSchema = new Schema({
   ],
 });
 
-module.exports = model("dnd-imagen-area", dndImagenAreaSchema);
+module.exports = model("DndImagenArea", dndImagenAreaSchema, "dnd-imagen-area");
+
