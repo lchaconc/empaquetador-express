@@ -18,18 +18,3 @@ const config = require('./webpack.config.js');
 }
 
 module.exports = {build}
-
-/*
-
-build()
-  .then(stats => {
-    console.log(stats.toString({
-      colors: true
-    }));
-  })
-  .catch(err => {
-    console.error('********Error al construir la aplicación: >>>>', err);
-  });
-
-*/
-

@@ -34,14 +34,16 @@ async function obtenerTextos(req, res) {
   //console.log("resultado",resultado);
 
   try {
+    //obtiene los datos del build y los almacena en "stats" 
+    //para luego parsearlo y obtener el nombre del zip que comprimió en el build
     const stats = await build();
     const info = stats.toJson();
     console.log(info);
 
     return res.json({
       IsOk: true,
-      msj: "Paquete generado",
-      path: "/descargas/" + info.assets[0].name.split("\\")[2],
+      msj: "Paquete generado",      
+      path: "/descargas/" + info.assets[0].name.split("\\")[3],
     });
   } catch (err) {
     console.error("********Error al construir la aplicación: >>>>", err);

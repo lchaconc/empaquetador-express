@@ -43,9 +43,9 @@ module.exports = {
     filename: "bundle.[contenthash].js",
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./public/index.html" }),
+    new HtmlWebpackPlugin({ template: "./plantillas/dnd-imagen-area/index.html" }),
     new ZipPlugin({
-      path: path.resolve(__dirname, "zips"),
+      path: path.resolve(__dirname, "../zips"),
       filename: `${crypto.randomBytes(20).toString('hex')}.zip`,
       extension: "zip",
     }),
