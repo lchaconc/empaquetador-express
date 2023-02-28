@@ -1,6 +1,10 @@
-const utils = require ("./utils.js");
-const eventHandlers = require ("./handlers.js");
+/*
+const utils = require ("./js/utils.js");
+const eventHandlers = require ("./js/handlers.js");
 const json = require("./data.json");
+*/
+import json from "./data.json";
+
 
 
 onload =()=> setup();
@@ -9,7 +13,7 @@ async function setup() {
     const data = json[0];      
     console.log("setup", data);
   
-  
+  /*
   const textos = data.textos; 
   const areas = data.areas;
   const cajas = data.cajas;
@@ -20,5 +24,5 @@ async function setup() {
   utils.renderAreas(areas);
   utils.renderCajas(cajas);
   eventHandlers(cajas, textos );
-  
+  */
 }

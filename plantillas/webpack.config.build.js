@@ -5,10 +5,8 @@ const crypto = require('crypto');
 
 const ruleBabel = {
   test: /\.js/,
-  loader: "babel-loader",
-  options: {
-    presets: [["@babel/preset-env"]],
-  },
+  use: "babel-loader",
+  exclude: "/node_modules/"
 };
 
 const ruleCSS = {
@@ -56,4 +54,7 @@ module.exports = {
   devServer: {
     port: 5500,
   },
+  resolve: {
+    extensions: ['.js', '.json']
+  }
 };
